@@ -87,6 +87,6 @@ docker push gflaminio3/php84-nginx-alpine
 
 ### GHCR
 ```bash
-docker tag php84-nginx-alpine ghcr.io/USER/php84-nginx-alpine
-docker push ghcr.io/USER/php84-nginx-alpine
+docker tag php84-nginx-alpine ghcr.io/gflaminio3/php84-nginx-alpine
+docker push ghcr.io/gflaminio3/php84-nginx-alpine
 ```
