@@ -16,7 +16,7 @@ Lightweight Docker image based on **Alpine 3.22**, featuring:
 ## Repository Structure
 
 ```
-php-nginx-84-alpine/
+php84-nginx-alpine/
 ├─ Dockerfile
 ├─ docker/
 │  ├─ nginx/app.conf
@@ -30,9 +30,9 @@ php-nginx-84-alpine/
 ## Build
 
 ```bash
-docker build -t php-nginx-84-alpine .
+docker build -t php84-nginx-alpine .
 # with timezone
-docker build --build-arg TZ=Europe/Rome -t php-nginx-84-alpine .
+docker build --build-arg TZ=Europe/Rome -t php84-nginx-alpine .
 ```
 
 ---
@@ -40,7 +40,7 @@ docker build --build-arg TZ=Europe/Rome -t php-nginx-84-alpine .
 ## Run
 
 ```bash
-docker run --rm -p 443:443   -v $(pwd)/app:/var/www/app   php-nginx-84-alpine
+docker run --rm -p 443:443   -v $(pwd)/app:/var/www/app   php84-nginx-alpine
 ```
 
 Laravel root: `/var/www/app/public`
@@ -81,12 +81,12 @@ docker exec -it <container> composer install
 
 ### Docker Hub
 ```bash
-docker tag php-nginx-84-alpine yourname/php-nginx-84-alpine
-docker push yourname/php-nginx-84-alpine
+docker tag php84-nginx-alpine gflaminio3/php84-nginx-alpine
+docker push gflaminio3/php84-nginx-alpine
 ```
 
 ### GHCR
 ```bash
-docker tag php-nginx-84-alpine ghcr.io/USER/php-nginx-84-alpine
-docker push ghcr.io/USER/php-nginx-84-alpine
+docker tag php84-nginx-alpine ghcr.io/USER/php84-nginx-alpine
+docker push ghcr.io/USER/php84-nginx-alpine
 ```
